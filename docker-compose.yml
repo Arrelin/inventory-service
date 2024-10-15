@@ -1,0 +1,11 @@
+services:
+  postgresql-inventory:
+    image: postgres:17.0
+    ports:
+      - "5430:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 2123
+      POSTGRES_DB: inventory-service
+    volumes:
+      - ./data:/db/data

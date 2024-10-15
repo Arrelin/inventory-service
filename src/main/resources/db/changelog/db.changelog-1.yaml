@@ -1,0 +1,44 @@
+databaseChangeLog:
+  - changeSet:
+      id:  create-table-inventory
+      author:  Arrelin
+      labels: creating table
+      context: some stuff
+      comment: still pls work
+      changes:
+        - createTable:
+            tableName:  inventory
+            columns:
+              - column:
+                  name:  id
+                  type:  bigint
+                  autoIncrement:  true
+                  constraints:
+                    primaryKey:  true
+                    nullable:  false
+              - column:
+                  name:  sku_code
+                  type:  text
+                  constraints:
+                    nullable:  false
+              - column:
+                  name:  quantity
+                  type:  int
+                  constraints:
+                    nullable:  false
+  - changeSet:
+      id:  insert-data-inventory
+      author:  Arrelin
+      labels: inserting-data
+      context: some sku stuff
+      comment: pls work
+      changes:
+        - insert:
+            tableName:  inventory
+            columns:
+              - column:
+                  name:  sku_code
+                  value:  'SAM1232128'
+              - column:
+                  name:  quantity
+                  value: '3200'
