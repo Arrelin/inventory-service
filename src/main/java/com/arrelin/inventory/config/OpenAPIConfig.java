@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Configuration;
 public class OpenAPIConfig {
 
     @Bean
-    public OpenAPI productServiceAPI() {
+    public OpenAPI inventoryServiceAPI() {
         return new OpenAPI()
                 .info(new Info().title("Inventory Service API")
                 .description("REST API for inventory microservice")
