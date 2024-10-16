@@ -8,7 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/inventory")
+@RequestMapping("/api/inventory")
 @RequiredArgsConstructor
 @Slf4j
 public class InventoryController {
